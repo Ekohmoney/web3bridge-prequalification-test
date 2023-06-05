@@ -21,6 +21,7 @@ const elements = [
   { element: address, err: address_err },
   { element: locationField, err: location_err },
   { element: color, err: color_err },
+   { element: food, err: food_err },
   { element: email, err: email_err }
 ];
 
@@ -53,10 +54,10 @@ function validateForm() {
   if (
     fullNameValidate &&
     addressValidate &&
+    foodValidate &&
     locationValidate &&
     emailValidate &&
-    colorValidate &&
-    foodValidate
+    colorValidate 
   ) {
     return true;
   } else {
@@ -94,5 +95,5 @@ function resetForm() {
   address.value = "";
   email.value = "";
   color.value = "";
-  color.value = "";
+  food.value = "";
 }
